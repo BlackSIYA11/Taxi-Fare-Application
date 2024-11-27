@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Taxi Math App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Taxi Fare Calculator</h1>
+
+        <div class="info">
+            <span>Total Amount of People: 15</span>
+            <span>Total Fare: R225</span>
+        </div>
+
+        <label for="rate">Rate per person:</label>
+        <input type="number" id="rate" required placeholder="Rate per person">
+
+        <div class="seating-container">
+            <h2>Taxi Seating Rows (5 Rows)</h2>
+
+            <!-- Row 1 -->
+            <div class="row">
+                <label>Row 1</label>
+                <input type="number" class="people" placeholder="Number of People" id="people1">
+                <input type="number" class="amount-entered" placeholder="Amount Entered" id="amount1">
+                <button onclick="calculateFareForRow(1)">Calculate Fare</button>
+                <h1>Total Fare: <span id="total1"></span></h1>
+                <h1>Change: <span id="change1"></span></h1>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="row">
+                <label>Row 2</label>
+                <input type="number" class="people" placeholder="Number of People" id="people2">
+                <input type="number" class="amount-entered" placeholder="Amount Entered" id="amount2">
+                <button onclick="calculateFareForRow(2)">Calculate Fare</button>
+                <h1>Total Fare: <span id="total2"></span></h1>
+                <h1>Change: <span id="change2"></span></h1>
+            </div>
+
+            <!-- Row 3 -->
+            <div class="row">
+                <label>Row 3</label>
+                <input type="number" class="people" placeholder="Number of People" id="people3">
+                <input type="number" class="amount-entered" placeholder="Amount Entered" id="amount3">
+                <button onclick="calculateFareForRow(3)">Calculate Fare</button>
+                <h1>Total Fare: <span id="total3"></span></h1>
+                <h1>Change: <span id="change3"></span></h1>
+            </div>
+
+            <!-- Row 4 -->
+            <div class="row">
+                <label>Row 4</label>
+                <input type="number" class="people" placeholder="Number of People" id="people4">
+                <input type="number" class="amount-entered" placeholder="Amount Entered" id="amount4">
+                <button onclick="calculateFareForRow(4)">Calculate Fare</button>
+                <h1>Total Fare: <span id="total4"></span></h1>
+                <h1>Change: <span id="change4"></span></h1>
+            </div>
+
+            <!-- Row 5 -->
+            <div class="row">
+                <label>Row 5</label>
+                <input type="number" class="people" placeholder="Number of People" id="people5">
+                <input type="number" class="amount-entered" placeholder="Amount Entered" id="amount5">
+                <button onclick="calculateFareForRow(5)">Calculate Fare</button>
+                <h1>Total Fare: <span id="total5"></span></h1>
+                <h1>Change: <span id="change5"></span></h1>
+            </div>
+        </div>
+    </div>
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
