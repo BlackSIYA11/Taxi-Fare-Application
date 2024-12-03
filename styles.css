@@ -1,94 +1,140 @@
-/* Add this to your css/styles.css */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: #f0f8ff;
     margin: 0;
     padding: 20px;
 }
 
-/* General container styling */
 .container {
     max-width: 800px;
     margin: auto;
     padding: 20px;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #0a0909;
+}
+
+.info {
     margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 label {
     font-weight: bold;
-    margin-right: 10px;
+    color: #555;
 }
 
-/* Styling the seating container */
-.seating-container {
-    margin-top: 20px;
-    padding: 10px 0;
-}
-
-.row {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-bottom: 15px;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-}
-
-/* Input field styling */
 input[type="number"] {
-    width: 100px;
+    margin: 10px 0;
     padding: 8px;
-    margin-right: 10px;
+    width: 150px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 16px;
 }
 
-/* Button styling */
+ /* Style for the Clear All button */
+.clearInputs button {
+    background-color: #f44336; /* Red background to indicate clearing */
+    color: white; /* White text color */
+    border: none; /* No border */
+    padding: 10px 20px; /* Padding for better spacing */
+    font-size: 16px; /* Font size for readability */
+    cursor: pointer; /* Pointer cursor to indicate it's clickable */
+    border-radius: 5px; /* Rounded corners */
+    margin-top: 20px; /* Space above the button */
+    margin-right: 20px;
+}
+
+.clearInputs button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.clearInputs button:focus {
+    outline: none; /* Removes default focus outline */
+}
+
+
 button {
-    padding: 8px 12px;
-    background-color: #4CAF50;
+    padding: 10px 20px;
+    background-color: #1abc9c;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 14px;
-    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: #45a049;
+    background-color: #16a085;
 }
 
-/* Styling for the span elements showing results */
-span {
-    margin-left: 10px;
+.seating-container {
+    margin-top: 20px;
+}
+
+.row {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.row input {
+    width: 150px;
+}
+
+.row span {
     font-weight: bold;
-    font-size: 14px;
 }
 
-/* Responsive design */
+.dropbtn {
+    background-color: #4c6daf;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    margin: 15px 0;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 150px;
+}
+
+.dropdown-content a {
+    padding: 10px;
+    color: black;
+    display: block;
+    text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown-content a:hover {background-color: #70aef1;}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+
+}
+
 @media (max-width: 768px) {
     .row {
         flex-direction: column;
-        align-items: flex-start;
-    }
-
-    input[type="number"], button {
-        margin-bottom: 10px;
-    }
-
-    span {
-        margin-left: 0;
     }
 }

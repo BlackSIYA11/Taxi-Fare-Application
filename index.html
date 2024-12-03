@@ -3,20 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="styles.css">
     <title>Taxi Math App</title>
 </head>
 <body>
     <div class="container">
-        <h1>Taxi Fare Calculator</h1>
+        <h1>Taxi Fare Application</h1>
 
         <div class="info">
-            <span>Total Amount of People: 15</span>
-            <span>Total Fare: R225</span>
+            <span>Total Amount of People: </span>
+            <span>Total Fare: R</span>
+        </div>
+
+        <div class="clearInputs">
+            <button onclick="clearInputs()">Clear All</button>
         </div>
 
         <label for="rate">Rate per person:</label>
         <input type="number" id="rate" required placeholder="Rate per person">
+
+        <div class="dropdown">
+            <button class="dropbtn">Select Location</button>
+            <div class="dropdown-content">
+                <a href="#" onclick="updateRate(15)">Johannesburg CBD to Soweto (R15)</a>
+                <a href="#" onclick="updateRate(12)">Johannesburg CBD to Sandton (R12)</a>
+                <a href="#" onclick="updateRate(40)">Johannesburg CBD to Pretoria (R40)</a>
+                <a href="#" onclick="updateRate(25)">Johannesburg CBD to Tembisa (R25)</a>
+                <a href="#" onclick="updateRate(20)">Johannesburg CBD to East Rand (R20)</a>
+                <a href="#" onclick="updateRate(20)">Johannesburg CBD to Midrand (R20)</a>
+                <a href="#" onclick="updateRate(10)">Johannesburg CBD to Alexandra (R10)</a>
+                <a href="#" onclick="updateRate(12)">Pretoria CBD to Centurion (R12)</a>
+                <a href="#" onclick="updateRate(20)">Pretoria CBD to Soshanguve (R20)</a>
+                <a href="#" onclick="updateRate(15)">Pretoria CBD to Mamelodi (R15)</a>
+                <a href="#" onclick="updateRate(40)">Pretoria CBD to Johannesburg CBD (R40)</a>
+            </div>
+        </div>
+        
 
         <div class="seating-container">
             <h2>Taxi Seating Rows (5 Rows)</h2>
@@ -25,7 +47,7 @@
             <div class="row">
                 <label>Row 1</label>
                 <input type="number" class="people" placeholder="Number of People" id="people1">
-                <input type="number" class="amount-entered" placeholder="Amount Entered" id="amount1">
+                <input type="number" class="amount-entered" placeholder="Amount Entered" id="amount1" width="200px">
                 <button onclick="calculateFareForRow(1)">Calculate Fare</button>
                 <h1>Total Fare: <span id="total1"></span></h1>
                 <h1>Change: <span id="change1"></span></h1>
@@ -73,7 +95,6 @@
         </div>
     </div>
 
-    
     <script src="script.js"></script>
 </body>
 </html>
